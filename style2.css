@@ -1,0 +1,61 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    text-align: center;
+}
+
+.h1 {
+    font-size: 50px;
+    color: rgb(220, 20, 20);
+    margin-bottom: 100px;
+}
+
+.card {
+    margin-left: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, auto));
+    gap: 15px;
+}
+
+.D1 {
+    width: 380px;
+    height: 370px;
+    background-color: rgb(175, 176, 188);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative; /* Added to position the .layer correctly */
+    overflow: hidden;   /* Ensure the layer doesn't overflow */
+}
+
+.D1 img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    transition: transform 0.3s; /* Smooth transition for image scaling */
+}
+
+.D1:hover img {
+    transform: scale(1.1);
+}
+
+.layer {
+    height: 0;
+    width: 100%;
+    background-image: linear-gradient(black, red);
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: height 0.5s ease; /* Smooth height transition */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Ensures text is visible */
+}
+
+.D1:hover .layer {
+    height: 100%;
+}

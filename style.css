@@ -1,0 +1,31 @@
+:root{
+     --FS:50PX;     /*global variable  */
+}
+
+.yasmin{
+     font-size:var(--FS);      /*local variable */
+}
+.A{
+
+    /* ال -- بنعرف بيها الفاريابول */
+    --A:red;
+    color: var(--A);       
+    /* الفار دي الفانكشن الي بننادي عليها وبنحط جواها الفاريابول */
+
+}
+
+.div1 > .list1 > .l2 {
+    color: green;
+}
+.div2 .list2 {
+    color: red;
+}
+h2+p{
+    color: chocolate;
+}
+h1~p{
+    color: aqua;
+}
+.di{
+
+}
